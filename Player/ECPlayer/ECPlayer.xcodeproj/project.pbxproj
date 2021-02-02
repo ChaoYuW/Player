@@ -10,6 +10,7 @@
 		E56BA09B25C94B7900A4645C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56BA09A25C94B7900A4645C /* MainViewController.m */; };
 		E56BA0A125C94B8300A4645C /* NavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = E56BA09E25C94B8300A4645C /* NavBarView.m */; };
 		E56BA0A225C94B8300A4645C /* NavBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E56BA0A025C94B8300A4645C /* NavBarView.xib */; };
+		E56BA0A925C9552F00A4645C /* ECAVPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56BA0A825C9552F00A4645C /* ECAVPlayerViewController.m */; };
 		E5F72B7A25BFEBB1009C6FBF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F72B7925BFEBB1009C6FBF /* AppDelegate.m */; };
 		E5F72B8325BFEBB1009C6FBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5F72B8125BFEBB1009C6FBF /* Main.storyboard */; };
 		E5F72B8525BFEBB5009C6FBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5F72B8425BFEBB5009C6FBF /* Assets.xcassets */; };
@@ -29,6 +30,8 @@
 		E56BA09E25C94B8300A4645C /* NavBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavBarView.m; sourceTree = "<group>"; };
 		E56BA09F25C94B8300A4645C /* NavBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavBarView.h; sourceTree = "<group>"; };
 		E56BA0A025C94B8300A4645C /* NavBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavBarView.xib; sourceTree = "<group>"; };
+		E56BA0A725C9552F00A4645C /* ECAVPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECAVPlayerViewController.h; sourceTree = "<group>"; };
+		E56BA0A825C9552F00A4645C /* ECAVPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECAVPlayerViewController.m; sourceTree = "<group>"; };
 		E5F72B7525BFEBB1009C6FBF /* ECPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ECPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5F72B7825BFEBB1009C6FBF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E5F72B7925BFEBB1009C6FBF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -71,6 +74,15 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		E56BA0A625C954F200A4645C /* AVPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				E56BA0A725C9552F00A4645C /* ECAVPlayerViewController.h */,
+				E56BA0A825C9552F00A4645C /* ECAVPlayerViewController.m */,
+			);
+			path = AVPlayer;
+			sourceTree = "<group>";
+		};
 		E5F72B6C25BFEBB0009C6FBF = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +102,7 @@
 		E5F72B7725BFEBB1009C6FBF /* ECPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				E56BA0A625C954F200A4645C /* AVPlayer */,
 				E5F72B9225BFEBE1009C6FBF /* MoviePlayer */,
 				E5F72B7825BFEBB1009C6FBF /* AppDelegate.h */,
 				E5F72B7925BFEBB1009C6FBF /* AppDelegate.m */,
@@ -198,6 +211,7 @@
 				E5F72B7A25BFEBB1009C6FBF /* AppDelegate.m in Sources */,
 				E56BA09B25C94B7900A4645C /* MainViewController.m in Sources */,
 				E5F72B9A25BFED9C009C6FBF /* ECVideoEditViewController.m in Sources */,
+				E56BA0A925C9552F00A4645C /* ECAVPlayerViewController.m in Sources */,
 				E5F72B8B25BFEBB5009C6FBF /* main.m in Sources */,
 				E56BA0A125C94B8300A4645C /* NavBarView.m in Sources */,
 				E5F72BAC25BFF470009C6FBF /* ECLineView.m in Sources */,

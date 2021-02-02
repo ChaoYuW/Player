@@ -7,6 +7,7 @@
 
 #import "MainViewController.h"
 #import "ECVideoEditViewController.h"
+#import "ECAVPlayerViewController.h"
 
 
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -44,7 +45,7 @@
     
     self.menuMuAry = [NSMutableArray arrayWithObjects:
                       @"视频裁剪",
-                      @"分时图",
+                      @"原生AVPlayer",
                       nil];
     
     
@@ -76,9 +77,10 @@
     if ([text isEqualToString:@"视频裁剪"]) {
         ECVideoEditViewController *vc = ECVideoEditViewController.new;
         [self.navigationController pushViewController:vc animated:YES];
-    }else if ([text isEqualToString:@"分时图"])
+    }else if ([text isEqualToString:@"原生AVPlayer"])
     {
-        
+        ECAVPlayerViewController *vc = ECAVPlayerViewController.new;
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 - (UITableView *)myTableView
