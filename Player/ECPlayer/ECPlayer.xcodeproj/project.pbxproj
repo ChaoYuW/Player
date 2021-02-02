@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E56BA09B25C94B7900A4645C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56BA09A25C94B7900A4645C /* MainViewController.m */; };
+		E56BA0A125C94B8300A4645C /* NavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = E56BA09E25C94B8300A4645C /* NavBarView.m */; };
+		E56BA0A225C94B8300A4645C /* NavBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E56BA0A025C94B8300A4645C /* NavBarView.xib */; };
 		E5F72B7A25BFEBB1009C6FBF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F72B7925BFEBB1009C6FBF /* AppDelegate.m */; };
-		E5F72B7D25BFEBB1009C6FBF /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F72B7C25BFEBB1009C6FBF /* SceneDelegate.m */; };
-		E5F72B8025BFEBB1009C6FBF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F72B7F25BFEBB1009C6FBF /* ViewController.m */; };
 		E5F72B8325BFEBB1009C6FBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5F72B8125BFEBB1009C6FBF /* Main.storyboard */; };
 		E5F72B8525BFEBB5009C6FBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5F72B8425BFEBB5009C6FBF /* Assets.xcassets */; };
 		E5F72B8825BFEBB5009C6FBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5F72B8625BFEBB5009C6FBF /* LaunchScreen.storyboard */; };
@@ -23,13 +24,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E56BA09925C94B7900A4645C /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		E56BA09A25C94B7900A4645C /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		E56BA09E25C94B8300A4645C /* NavBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavBarView.m; sourceTree = "<group>"; };
+		E56BA09F25C94B8300A4645C /* NavBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavBarView.h; sourceTree = "<group>"; };
+		E56BA0A025C94B8300A4645C /* NavBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavBarView.xib; sourceTree = "<group>"; };
 		E5F72B7525BFEBB1009C6FBF /* ECPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ECPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5F72B7825BFEBB1009C6FBF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E5F72B7925BFEBB1009C6FBF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E5F72B7B25BFEBB1009C6FBF /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		E5F72B7C25BFEBB1009C6FBF /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		E5F72B7E25BFEBB1009C6FBF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E5F72B7F25BFEBB1009C6FBF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E5F72B8225BFEBB1009C6FBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E5F72B8425BFEBB5009C6FBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5F72B8725BFEBB5009C6FBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,6 +61,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E56BA09D25C94B8300A4645C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E56BA09E25C94B8300A4645C /* NavBarView.m */,
+				E56BA09F25C94B8300A4645C /* NavBarView.h */,
+				E56BA0A025C94B8300A4645C /* NavBarView.xib */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		E5F72B6C25BFEBB0009C6FBF = {
 			isa = PBXGroup;
 			children = (
@@ -81,12 +93,10 @@
 				E5F72B9225BFEBE1009C6FBF /* MoviePlayer */,
 				E5F72B7825BFEBB1009C6FBF /* AppDelegate.h */,
 				E5F72B7925BFEBB1009C6FBF /* AppDelegate.m */,
+				E56BA09925C94B7900A4645C /* MainViewController.h */,
+				E56BA09A25C94B7900A4645C /* MainViewController.m */,
 				E5F72B9825BFED9C009C6FBF /* ECVideoEditViewController.h */,
 				E5F72B9925BFED9C009C6FBF /* ECVideoEditViewController.m */,
-				E5F72B7B25BFEBB1009C6FBF /* SceneDelegate.h */,
-				E5F72B7C25BFEBB1009C6FBF /* SceneDelegate.m */,
-				E5F72B7E25BFEBB1009C6FBF /* ViewController.h */,
-				E5F72B7F25BFEBB1009C6FBF /* ViewController.m */,
 				E5F72BA625BFEF38009C6FBF /* video.mp4 */,
 				E5F72B8125BFEBB1009C6FBF /* Main.storyboard */,
 				E5F72B8425BFEBB5009C6FBF /* Assets.xcassets */,
@@ -108,6 +118,7 @@
 				E5F72B9E25BFEDF6009C6FBF /* VideoPieces.m */,
 				E5F72B9325BFEC14009C6FBF /* ECMoviePlayer.h */,
 				E5F72B9425BFEC14009C6FBF /* ECMoviePlayer.m */,
+				E56BA09D25C94B8300A4645C /* Common */,
 			);
 			path = MoviePlayer;
 			sourceTree = "<group>";
@@ -172,6 +183,7 @@
 				E5F72B8525BFEBB5009C6FBF /* Assets.xcassets in Resources */,
 				E5F72B8325BFEBB1009C6FBF /* Main.storyboard in Resources */,
 				E5F72BA825BFF020009C6FBF /* video.mp4 in Resources */,
+				E56BA0A225C94B8300A4645C /* NavBarView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,11 +195,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5F72BA325BFEDF6009C6FBF /* VideoPieces.m in Sources */,
-				E5F72B8025BFEBB1009C6FBF /* ViewController.m in Sources */,
 				E5F72B7A25BFEBB1009C6FBF /* AppDelegate.m in Sources */,
+				E56BA09B25C94B7900A4645C /* MainViewController.m in Sources */,
 				E5F72B9A25BFED9C009C6FBF /* ECVideoEditViewController.m in Sources */,
 				E5F72B8B25BFEBB5009C6FBF /* main.m in Sources */,
-				E5F72B7D25BFEBB1009C6FBF /* SceneDelegate.m in Sources */,
+				E56BA0A125C94B8300A4645C /* NavBarView.m in Sources */,
 				E5F72BAC25BFF470009C6FBF /* ECLineView.m in Sources */,
 				E5F72B9525BFEC14009C6FBF /* ECMoviePlayer.m in Sources */,
 				E5F72BB125BFF508009C6FBF /* ECHaftView.m in Sources */,

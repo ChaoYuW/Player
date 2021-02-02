@@ -27,11 +27,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    CGFloat navHeight = 64;
+    if (@available(iOS 11.0, *))
+    {
+            UIWindow *mainWindow = [[UIApplication sharedApplication].windows firstObject];
+            if (mainWindow.safeAreaInsets.bottom > 0.0) {
+                navHeight = 88;
+            }
+    }else
+    {
+        navHeight = 64;
+    }
+    
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.view.backgroundColor = [UIColor blackColor];
     NSString *path = [[NSBundle mainBundle] pathForResource:@"video" ofType:@"mp4"];
     self.lastEndSeconds = NAN;
-    CGRect pFrame = CGRectMake(10, 100,[UIScreen mainScreen].bounds.size.width-20, 300);
+    CGRect pFrame = CGRectMake(10, navHeight+10,[UIScreen mainScreen].bounds.size.width-20, 300);
     self.moviePlayer = [[ECMoviePlayer alloc] initWithFrame:pFrame url:[NSURL fileURLWithPath:path] superLayer:self.view.layer];
     __weak typeof(self) this = self;
     [self.moviePlayer setBlockStatusReadyPlay:^(AVPlayerItem *playItem){
