@@ -12,10 +12,15 @@
 		E56BA0A125C94B8300A4645C /* NavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = E56BA09E25C94B8300A4645C /* NavBarView.m */; };
 		E56BA0A225C94B8300A4645C /* NavBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E56BA0A025C94B8300A4645C /* NavBarView.xib */; };
 		E56BA0A925C9552F00A4645C /* ECAVPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56BA0A825C9552F00A4645C /* ECAVPlayerViewController.m */; };
-		E56BA0AF25CA36AB00A4645C /* ECPlayerBackView.m in Sources */ = {isa = PBXBuildFile; fileRef = E56BA0AE25CA36AB00A4645C /* ECPlayerBackView.m */; };
-		E56BA0B425CA36DB00A4645C /* ECPlayerBackTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = E56BA0B325CA36DB00A4645C /* ECPlayerBackTopView.m */; };
-		E56BA0B825CA36F800A4645C /* ECPlayerBackBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = E56BA0B725CA36F800A4645C /* ECPlayerBackBottomView.m */; };
 		E56BA0C125CA4FF900A4645C /* ECBasePlayerControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = E56BA0C025CA4FF900A4645C /* ECBasePlayerControlView.m */; };
+		E56BA0C625CA764C00A4645C /* ECDefaultControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = E56BA0C525CA764C00A4645C /* ECDefaultControlView.m */; };
+		E56BA0C925CA786100A4645C /* Player.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E56BA0C825CA786000A4645C /* Player.bundle */; };
+		E56BA0D125CA7FEA00A4645C /* UIView+Fade.m in Sources */ = {isa = PBXBuildFile; fileRef = E56BA0CF25CA7FEA00A4645C /* UIView+Fade.m */; };
+		E56BA0D525CA88B700A4645C /* PlayerSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = E56BA0D425CA88B700A4645C /* PlayerSlider.m */; };
+		E56BA0DC25CA90C400A4645C /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = E56BA0DA25CA90C400A4645C /* UIView+Layout.m */; };
+		E56BA0E225CA97FF00A4645C /* MoreContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = E56BA0E125CA97FF00A4645C /* MoreContentView.m */; };
+		E56BA0E625CA984A00A4645C /* PlayerViewConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E56BA0E525CA984A00A4645C /* PlayerViewConfig.m */; };
+		E56BA0EA25CA9D4800A4645C /* StrUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E56BA0E925CA9D4800A4645C /* StrUtils.m */; };
 		E5F72B7A25BFEBB1009C6FBF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F72B7925BFEBB1009C6FBF /* AppDelegate.m */; };
 		E5F72B8325BFEBB1009C6FBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5F72B8125BFEBB1009C6FBF /* Main.storyboard */; };
 		E5F72B8525BFEBB5009C6FBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5F72B8425BFEBB5009C6FBF /* Assets.xcassets */; };
@@ -40,14 +45,25 @@
 		E56BA0A025C94B8300A4645C /* NavBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavBarView.xib; sourceTree = "<group>"; };
 		E56BA0A725C9552F00A4645C /* ECAVPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECAVPlayerViewController.h; sourceTree = "<group>"; };
 		E56BA0A825C9552F00A4645C /* ECAVPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECAVPlayerViewController.m; sourceTree = "<group>"; };
-		E56BA0AD25CA36AB00A4645C /* ECPlayerBackView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECPlayerBackView.h; sourceTree = "<group>"; };
-		E56BA0AE25CA36AB00A4645C /* ECPlayerBackView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECPlayerBackView.m; sourceTree = "<group>"; };
-		E56BA0B225CA36DB00A4645C /* ECPlayerBackTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECPlayerBackTopView.h; sourceTree = "<group>"; };
-		E56BA0B325CA36DB00A4645C /* ECPlayerBackTopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECPlayerBackTopView.m; sourceTree = "<group>"; };
-		E56BA0B625CA36F800A4645C /* ECPlayerBackBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECPlayerBackBottomView.h; sourceTree = "<group>"; };
-		E56BA0B725CA36F800A4645C /* ECPlayerBackBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECPlayerBackBottomView.m; sourceTree = "<group>"; };
 		E56BA0BF25CA4FF900A4645C /* ECBasePlayerControlView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECBasePlayerControlView.h; sourceTree = "<group>"; };
 		E56BA0C025CA4FF900A4645C /* ECBasePlayerControlView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECBasePlayerControlView.m; sourceTree = "<group>"; };
+		E56BA0C425CA764C00A4645C /* ECDefaultControlView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECDefaultControlView.h; sourceTree = "<group>"; };
+		E56BA0C525CA764C00A4645C /* ECDefaultControlView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECDefaultControlView.m; sourceTree = "<group>"; };
+		E56BA0C825CA786000A4645C /* Player.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Player.bundle; sourceTree = "<group>"; };
+		E56BA0CB25CA796500A4645C /* PlayerHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerHeader.h; sourceTree = "<group>"; };
+		E56BA0CC25CA7D3B00A4645C /* PlayerControlViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerControlViewDelegate.h; sourceTree = "<group>"; };
+		E56BA0CF25CA7FEA00A4645C /* UIView+Fade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Fade.m"; sourceTree = "<group>"; };
+		E56BA0D025CA7FEA00A4645C /* UIView+Fade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Fade.h"; sourceTree = "<group>"; };
+		E56BA0D325CA88B700A4645C /* PlayerSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerSlider.h; sourceTree = "<group>"; };
+		E56BA0D425CA88B700A4645C /* PlayerSlider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerSlider.m; sourceTree = "<group>"; };
+		E56BA0DA25CA90C400A4645C /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
+		E56BA0DB25CA90C400A4645C /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
+		E56BA0E025CA97FF00A4645C /* MoreContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreContentView.h; sourceTree = "<group>"; };
+		E56BA0E125CA97FF00A4645C /* MoreContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreContentView.m; sourceTree = "<group>"; };
+		E56BA0E425CA984A00A4645C /* PlayerViewConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerViewConfig.h; sourceTree = "<group>"; };
+		E56BA0E525CA984A00A4645C /* PlayerViewConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerViewConfig.m; sourceTree = "<group>"; };
+		E56BA0E825CA9D4800A4645C /* StrUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StrUtils.h; sourceTree = "<group>"; };
+		E56BA0E925CA9D4800A4645C /* StrUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StrUtils.m; sourceTree = "<group>"; };
 		E5F72B7525BFEBB1009C6FBF /* ECPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ECPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5F72B7825BFEBB1009C6FBF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E5F72B7925BFEBB1009C6FBF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -121,16 +137,35 @@
 		E56BA0AC25CA366000A4645C /* PlayerView */ = {
 			isa = PBXGroup;
 			children = (
-				E56BA0AD25CA36AB00A4645C /* ECPlayerBackView.h */,
-				E56BA0AE25CA36AB00A4645C /* ECPlayerBackView.m */,
-				E56BA0B225CA36DB00A4645C /* ECPlayerBackTopView.h */,
-				E56BA0B325CA36DB00A4645C /* ECPlayerBackTopView.m */,
-				E56BA0B625CA36F800A4645C /* ECPlayerBackBottomView.h */,
-				E56BA0B725CA36F800A4645C /* ECPlayerBackBottomView.m */,
+				E56BA0CE25CA7F6A00A4645C /* utils */,
+				E56BA0D325CA88B700A4645C /* PlayerSlider.h */,
+				E56BA0D425CA88B700A4645C /* PlayerSlider.m */,
 				E56BA0BF25CA4FF900A4645C /* ECBasePlayerControlView.h */,
 				E56BA0C025CA4FF900A4645C /* ECBasePlayerControlView.m */,
+				E56BA0C425CA764C00A4645C /* ECDefaultControlView.h */,
+				E56BA0C525CA764C00A4645C /* ECDefaultControlView.m */,
+				E56BA0E025CA97FF00A4645C /* MoreContentView.h */,
+				E56BA0E125CA97FF00A4645C /* MoreContentView.m */,
+				E56BA0E425CA984A00A4645C /* PlayerViewConfig.h */,
+				E56BA0E525CA984A00A4645C /* PlayerViewConfig.m */,
+				E56BA0C825CA786000A4645C /* Player.bundle */,
+				E56BA0CB25CA796500A4645C /* PlayerHeader.h */,
+				E56BA0CC25CA7D3B00A4645C /* PlayerControlViewDelegate.h */,
 			);
 			path = PlayerView;
+			sourceTree = "<group>";
+		};
+		E56BA0CE25CA7F6A00A4645C /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				E56BA0DB25CA90C400A4645C /* UIView+Layout.h */,
+				E56BA0DA25CA90C400A4645C /* UIView+Layout.m */,
+				E56BA0D025CA7FEA00A4645C /* UIView+Fade.h */,
+				E56BA0CF25CA7FEA00A4645C /* UIView+Fade.m */,
+				E56BA0E825CA9D4800A4645C /* StrUtils.h */,
+				E56BA0E925CA9D4800A4645C /* StrUtils.m */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 		E5F72B6C25BFEBB0009C6FBF = {
@@ -246,6 +281,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E56BA0C925CA786100A4645C /* Player.bundle in Resources */,
 				E5F72B8825BFEBB5009C6FBF /* LaunchScreen.storyboard in Resources */,
 				E5F72B8525BFEBB5009C6FBF /* Assets.xcassets in Resources */,
 				E5F72B8325BFEBB1009C6FBF /* Main.storyboard in Resources */,
@@ -307,14 +343,18 @@
 				E5F72B7A25BFEBB1009C6FBF /* AppDelegate.m in Sources */,
 				E56BA09B25C94B7900A4645C /* MainViewController.m in Sources */,
 				E56BA0C125CA4FF900A4645C /* ECBasePlayerControlView.m in Sources */,
-				E56BA0AF25CA36AB00A4645C /* ECPlayerBackView.m in Sources */,
-				E56BA0B425CA36DB00A4645C /* ECPlayerBackTopView.m in Sources */,
+				E56BA0DC25CA90C400A4645C /* UIView+Layout.m in Sources */,
+				E56BA0E225CA97FF00A4645C /* MoreContentView.m in Sources */,
 				E5F72B9A25BFED9C009C6FBF /* ECVideoEditViewController.m in Sources */,
 				E56BA0A925C9552F00A4645C /* ECAVPlayerViewController.m in Sources */,
 				E5F72B8B25BFEBB5009C6FBF /* main.m in Sources */,
-				E56BA0B825CA36F800A4645C /* ECPlayerBackBottomView.m in Sources */,
+				E56BA0EA25CA9D4800A4645C /* StrUtils.m in Sources */,
+				E56BA0C625CA764C00A4645C /* ECDefaultControlView.m in Sources */,
 				E56BA0A125C94B8300A4645C /* NavBarView.m in Sources */,
+				E56BA0D125CA7FEA00A4645C /* UIView+Fade.m in Sources */,
+				E56BA0E625CA984A00A4645C /* PlayerViewConfig.m in Sources */,
 				E5F72BAC25BFF470009C6FBF /* ECLineView.m in Sources */,
+				E56BA0D525CA88B700A4645C /* PlayerSlider.m in Sources */,
 				E5F72B9525BFEC14009C6FBF /* ECMoviePlayer.m in Sources */,
 				E5F72BB125BFF508009C6FBF /* ECHaftView.m in Sources */,
 			);
