@@ -1,0 +1,6 @@
+framework module Pods_ECPlayer {
+  umbrella header "Pods-ECPlayer-umbrella.h"
+
+  export *
+  module * { export * }
+}

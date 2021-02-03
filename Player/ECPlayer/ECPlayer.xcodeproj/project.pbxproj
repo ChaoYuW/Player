@@ -3,14 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0613F12304B6F7C343DB1D1A /* Pods_ECPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2452790897C53E121D5D8707 /* Pods_ECPlayer.framework */; };
 		E56BA09B25C94B7900A4645C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56BA09A25C94B7900A4645C /* MainViewController.m */; };
 		E56BA0A125C94B8300A4645C /* NavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = E56BA09E25C94B8300A4645C /* NavBarView.m */; };
 		E56BA0A225C94B8300A4645C /* NavBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E56BA0A025C94B8300A4645C /* NavBarView.xib */; };
 		E56BA0A925C9552F00A4645C /* ECAVPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56BA0A825C9552F00A4645C /* ECAVPlayerViewController.m */; };
+		E56BA0AF25CA36AB00A4645C /* ECPlayerBackView.m in Sources */ = {isa = PBXBuildFile; fileRef = E56BA0AE25CA36AB00A4645C /* ECPlayerBackView.m */; };
+		E56BA0B425CA36DB00A4645C /* ECPlayerBackTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = E56BA0B325CA36DB00A4645C /* ECPlayerBackTopView.m */; };
+		E56BA0B825CA36F800A4645C /* ECPlayerBackBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = E56BA0B725CA36F800A4645C /* ECPlayerBackBottomView.m */; };
+		E56BA0C125CA4FF900A4645C /* ECBasePlayerControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = E56BA0C025CA4FF900A4645C /* ECBasePlayerControlView.m */; };
 		E5F72B7A25BFEBB1009C6FBF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F72B7925BFEBB1009C6FBF /* AppDelegate.m */; };
 		E5F72B8325BFEBB1009C6FBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5F72B8125BFEBB1009C6FBF /* Main.storyboard */; };
 		E5F72B8525BFEBB5009C6FBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5F72B8425BFEBB5009C6FBF /* Assets.xcassets */; };
@@ -25,6 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2452790897C53E121D5D8707 /* Pods_ECPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ECPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8274177A30DDC4930AFA13B1 /* Pods-ECPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECPlayer.release.xcconfig"; path = "Target Support Files/Pods-ECPlayer/Pods-ECPlayer.release.xcconfig"; sourceTree = "<group>"; };
+		B827924D76B16E1AAF7F5D85 /* Pods-ECPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECPlayer.debug.xcconfig"; path = "Target Support Files/Pods-ECPlayer/Pods-ECPlayer.debug.xcconfig"; sourceTree = "<group>"; };
 		E56BA09925C94B7900A4645C /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		E56BA09A25C94B7900A4645C /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		E56BA09E25C94B8300A4645C /* NavBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavBarView.m; sourceTree = "<group>"; };
@@ -32,6 +40,14 @@
 		E56BA0A025C94B8300A4645C /* NavBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavBarView.xib; sourceTree = "<group>"; };
 		E56BA0A725C9552F00A4645C /* ECAVPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECAVPlayerViewController.h; sourceTree = "<group>"; };
 		E56BA0A825C9552F00A4645C /* ECAVPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECAVPlayerViewController.m; sourceTree = "<group>"; };
+		E56BA0AD25CA36AB00A4645C /* ECPlayerBackView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECPlayerBackView.h; sourceTree = "<group>"; };
+		E56BA0AE25CA36AB00A4645C /* ECPlayerBackView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECPlayerBackView.m; sourceTree = "<group>"; };
+		E56BA0B225CA36DB00A4645C /* ECPlayerBackTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECPlayerBackTopView.h; sourceTree = "<group>"; };
+		E56BA0B325CA36DB00A4645C /* ECPlayerBackTopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECPlayerBackTopView.m; sourceTree = "<group>"; };
+		E56BA0B625CA36F800A4645C /* ECPlayerBackBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECPlayerBackBottomView.h; sourceTree = "<group>"; };
+		E56BA0B725CA36F800A4645C /* ECPlayerBackBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECPlayerBackBottomView.m; sourceTree = "<group>"; };
+		E56BA0BF25CA4FF900A4645C /* ECBasePlayerControlView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECBasePlayerControlView.h; sourceTree = "<group>"; };
+		E56BA0C025CA4FF900A4645C /* ECBasePlayerControlView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECBasePlayerControlView.m; sourceTree = "<group>"; };
 		E5F72B7525BFEBB1009C6FBF /* ECPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ECPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5F72B7825BFEBB1009C6FBF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E5F72B7925BFEBB1009C6FBF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -58,12 +74,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0613F12304B6F7C343DB1D1A /* Pods_ECPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		94B142D2DF68673A346577D3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B827924D76B16E1AAF7F5D85 /* Pods-ECPlayer.debug.xcconfig */,
+				8274177A30DDC4930AFA13B1 /* Pods-ECPlayer.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D0B04C893B66F17028F7C657 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2452790897C53E121D5D8707 /* Pods_ECPlayer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E56BA09D25C94B8300A4645C /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -77,10 +111,26 @@
 		E56BA0A625C954F200A4645C /* AVPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				E56BA0AC25CA366000A4645C /* PlayerView */,
 				E56BA0A725C9552F00A4645C /* ECAVPlayerViewController.h */,
 				E56BA0A825C9552F00A4645C /* ECAVPlayerViewController.m */,
 			);
 			path = AVPlayer;
+			sourceTree = "<group>";
+		};
+		E56BA0AC25CA366000A4645C /* PlayerView */ = {
+			isa = PBXGroup;
+			children = (
+				E56BA0AD25CA36AB00A4645C /* ECPlayerBackView.h */,
+				E56BA0AE25CA36AB00A4645C /* ECPlayerBackView.m */,
+				E56BA0B225CA36DB00A4645C /* ECPlayerBackTopView.h */,
+				E56BA0B325CA36DB00A4645C /* ECPlayerBackTopView.m */,
+				E56BA0B625CA36F800A4645C /* ECPlayerBackBottomView.h */,
+				E56BA0B725CA36F800A4645C /* ECPlayerBackBottomView.m */,
+				E56BA0BF25CA4FF900A4645C /* ECBasePlayerControlView.h */,
+				E56BA0C025CA4FF900A4645C /* ECBasePlayerControlView.m */,
+			);
+			path = PlayerView;
 			sourceTree = "<group>";
 		};
 		E5F72B6C25BFEBB0009C6FBF = {
@@ -88,6 +138,8 @@
 			children = (
 				E5F72B7725BFEBB1009C6FBF /* ECPlayer */,
 				E5F72B7625BFEBB1009C6FBF /* Products */,
+				94B142D2DF68673A346577D3 /* Pods */,
+				D0B04C893B66F17028F7C657 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,9 +195,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E5F72B8E25BFEBB5009C6FBF /* Build configuration list for PBXNativeTarget "ECPlayer" */;
 			buildPhases = (
+				0E48B3C416484174E370D0CE /* [CP] Check Pods Manifest.lock */,
 				E5F72B7125BFEBB1009C6FBF /* Sources */,
 				E5F72B7225BFEBB1009C6FBF /* Frameworks */,
 				E5F72B7325BFEBB1009C6FBF /* Resources */,
+				E427F8C762B98D4895D0C757 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -202,6 +256,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0E48B3C416484174E370D0CE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ECPlayer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E427F8C762B98D4895D0C757 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ECPlayer/Pods-ECPlayer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ECPlayer/Pods-ECPlayer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ECPlayer/Pods-ECPlayer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E5F72B7125BFEBB1009C6FBF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -210,9 +306,13 @@
 				E5F72BA325BFEDF6009C6FBF /* VideoPieces.m in Sources */,
 				E5F72B7A25BFEBB1009C6FBF /* AppDelegate.m in Sources */,
 				E56BA09B25C94B7900A4645C /* MainViewController.m in Sources */,
+				E56BA0C125CA4FF900A4645C /* ECBasePlayerControlView.m in Sources */,
+				E56BA0AF25CA36AB00A4645C /* ECPlayerBackView.m in Sources */,
+				E56BA0B425CA36DB00A4645C /* ECPlayerBackTopView.m in Sources */,
 				E5F72B9A25BFED9C009C6FBF /* ECVideoEditViewController.m in Sources */,
 				E56BA0A925C9552F00A4645C /* ECAVPlayerViewController.m in Sources */,
 				E5F72B8B25BFEBB5009C6FBF /* main.m in Sources */,
+				E56BA0B825CA36F800A4645C /* ECPlayerBackBottomView.m in Sources */,
 				E56BA0A125C94B8300A4645C /* NavBarView.m in Sources */,
 				E5F72BAC25BFF470009C6FBF /* ECLineView.m in Sources */,
 				E5F72B9525BFEC14009C6FBF /* ECMoviePlayer.m in Sources */,
@@ -356,6 +456,7 @@
 		};
 		E5F72B8F25BFEBB5009C6FBF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B827924D76B16E1AAF7F5D85 /* Pods-ECPlayer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -374,6 +475,7 @@
 		};
 		E5F72B9025BFEBB5009C6FBF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8274177A30DDC4930AFA13B1 /* Pods-ECPlayer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
