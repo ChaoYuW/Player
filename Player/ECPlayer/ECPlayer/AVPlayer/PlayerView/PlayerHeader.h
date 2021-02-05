@@ -15,7 +15,7 @@
 // 屏幕的高
 #define ScreenHeight                        [[UIScreen mainScreen] bounds].size.height
 // 图片路径
-#define PlayerImage(file)              [UIImage imageNamed:[@"SuperPlayer.bundle" stringByAppendingPathComponent:file]]
+#define PlayerImage(file)              [UIImage imageNamed:[@"Player.bundle" stringByAppendingPathComponent:file]]
 
 #define TintColor RGBA(252, 89, 81, 1)
 #endif /* PlayerHeader_h */

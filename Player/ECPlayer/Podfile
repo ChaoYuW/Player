@@ -8,5 +8,6 @@ target 'ECPlayer' do
   # Pods for ECPlayer
 
   pod 'Masonry'
+  pod 'LookinServer', :configurations => ['Debug']
 
 end

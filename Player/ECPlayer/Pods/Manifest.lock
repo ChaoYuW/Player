@@ -1,16 +1,20 @@
 PODS:
+  - LookinServer (1.0.0)
   - Masonry (1.1.0)
 
 DEPENDENCIES:
+  - LookinServer
   - Masonry
 
 SPEC REPOS:
   trunk:
+    - LookinServer
     - Masonry
 
 SPEC CHECKSUMS:
+  LookinServer: 0002891cd3cec5e082a910e897dfe71b4f06b89e
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
-PODFILE CHECKSUM: 9acde05ac5a7f36c923541b595dfc23433b4011b
+PODFILE CHECKSUM: 7965240e78c65f475d64ee226cf0ea44781a28e8
 
 COCOAPODS: 1.10.0

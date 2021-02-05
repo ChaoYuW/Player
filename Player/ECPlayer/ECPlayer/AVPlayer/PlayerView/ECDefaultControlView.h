@@ -7,6 +7,7 @@
 
 #import "ECBasePlayerControlView.h"
 #import "PlayerSlider.h"
+#import "MoreContentView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -60,7 +61,7 @@ NS_ASSUME_NONNULL_BEGIN
 /** 分辨率的名称 */
 @property (nonatomic, strong) NSArray<NSString *>    *resolutionArray;
 ///** 更多设置View */
-//@property (nonatomic, strong) MoreContentView        *moreContentView;
+@property (nonatomic, strong) MoreContentView        *moreContentView;
 /** 返回直播 */
 @property (nonatomic, strong) UIButton               *backLiveBtn;
 

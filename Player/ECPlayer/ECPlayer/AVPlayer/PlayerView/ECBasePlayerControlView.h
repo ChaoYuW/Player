@@ -7,6 +7,7 @@
 
 #import <UIKit/UIKit.h>
 #import "PlayerControlViewDelegate.h"
+#import "PlayerViewConfig.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -59,7 +60,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 回调delegate
 @property (nonatomic, weak) id<PlayerControlViewDelegate> delegate;
 /// 播放配置
-//@property SuperPlayerViewConfig *playerConfig;
+@property PlayerViewConfig *playerConfig;
 
 - (void)setOrientationPortraitConstraint;
 - (void)setOrientationLandscapeConstraint;

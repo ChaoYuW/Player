@@ -9,8 +9,9 @@
 
 #import <AVFoundation/AVFoundation.h>
 #import <MediaPlayer/MediaPlayer.h>
+#import "ECDefaultControlView.h"
 
-@interface ECAVPlayerViewController ()
+@interface ECAVPlayerViewController ()<PlayerControlViewDelegate>
 
 
 @property (strong, nonatomic) AVPlayer *player;
@@ -21,7 +22,8 @@
 @property(nonatomic,strong)UIView *backView; // 上面一层View
 @property(nonatomic,strong)UIView *topView;
 @property(nonatomic,strong)UIProgressView *progress; // 缓冲条
-//@property ()
+@property (nonatomic,strong) ECDefaultControlView *controlView;
+
 
 @end
 
@@ -31,28 +33,31 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    _width = [[UIScreen mainScreen]bounds].size.height;
-    _height = [[UIScreen mainScreen]bounds].size.width;
+    _width = [[UIScreen mainScreen]bounds].size.width;
+    _height = [[UIScreen mainScreen]bounds].size.height;
     
     self.playerItem = [AVPlayerItem playerItemWithURL:[NSURL URLWithString:@"https://hard.storage.shmedia.tech/6319837d438b4bc099bbd5205d3f179e.mp4"]];
     
     self.player = [AVPlayer playerWithPlayerItem:self.playerItem];
     AVPlayerLayer *playerLayer = [AVPlayerLayer playerLayerWithPlayer:self.player];
     playerLayer.frame = CGRectMake(0, 0, _width, _height);
-    playerLayer.videoGravity = AVLayerVideoGravityResize;
+    playerLayer.videoGravity = AVLayerVideoGravityResizeAspect;
     [self.view.layer addSublayer:playerLayer];
+    self.controlView = [[ECDefaultControlView alloc] initWithFrame:CGRectMake(0, 0, _width, _height)];
+    self.controlView.delegate = self;
+    [self.view addSubview:self.controlView];
     
-    [self.player play];
     
-    [self.view addSubview:self.backView];
-    [self.view addSubview:self.topView];
-    [self.backView addSubview:self.progress];
     
-    [self layoutFrame];
+//    [self.view addSubview:self.backView];
+//    [self.view addSubview:self.topView];
+//    [self.backView addSubview:self.progress];
+    
+//    [self layoutFrame];
     
     
     //AVPlayer播放完成通知
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(moviePlayDidEnd:) name:AVPlayerItemDidPlayToEndTimeNotification object:_player.currentItem];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(moviePlayDidEnd:) name:AVPlayerItemDidPlayToEndTimeNotification object:_player.currentItem];
     [self.playerItem addObserver:self forKeyPath:@"loadedTimeRanges" options:NSKeyValueObservingOptionNew context:nil];// 监听loadedTimeRanges属性
     
 }
@@ -62,10 +67,23 @@
     self.backView.frame = CGRectMake(0, 0, _width, _height);
     self.topView.frame = CGRectMake(0, 0, _width, _height*0.15);
 }
-
-- (void)moviePlayDidEnd:(id)sender
+/** 播放 */
+- (void)controlViewPlay:(UIView *)controlView
+{
+    [self.player play];
+}
+/** 暂停 */
+- (void)controlViewPause:(UIView *)controlView
 {
     [_player pause];
+}
+- (void)controlViewDidChangeScreen:(UIView *)controlView
+{
+    
+}
+- (void)moviePlayDidEnd:(id)sender
+{
+    
 }
 #pragma mark -
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context
@@ -73,9 +91,17 @@
     if ([keyPath isEqualToString:@"loadedTimeRanges"]) {
         NSTimeInterval timeInterval = [self availableDuration];// 计算缓冲进度
 //        NSLog(@"Time Interval:%f",timeInterval);
+//        CMTime duration = self.playerItem.duration;
+//        CGFloat totalDuration = CMTimeGetSeconds(duration);
+//        [self.progress setProgress:timeInterval / totalDuration animated:NO];
+        
         CMTime duration = self.playerItem.duration;
-        CGFloat totalDuration = CMTimeGetSeconds(duration);
-        [self.progress setProgress:timeInterval / totalDuration animated:NO];
+        //总时长
+        CGFloat totalTime = CMTimeGetSeconds(duration);
+        CGFloat currentTime = CMTimeGetSeconds(self.playerItem.currentTime);
+        CGFloat value = currentTime/totalTime;
+
+        [self.controlView setProgressTime:currentTime totalTime:totalTime progressValue:value playableValue:0];
     }
 }
 - (NSTimeInterval)availableDuration {

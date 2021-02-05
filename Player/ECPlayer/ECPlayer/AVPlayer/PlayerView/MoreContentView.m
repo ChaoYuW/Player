@@ -302,6 +302,9 @@
 
 - (void)soundSliderValueChanged:(UISlider *)sender {
     if (self.isVolume)
+    {
+        
+    }
 //        [SuperPlayerView volumeViewSlider].value = sender.value;
 }
 

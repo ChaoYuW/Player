@@ -61,7 +61,7 @@
     self.danmakuBtn.hidden = YES;
     self.moreBtn.hidden     = YES;
     self.resolutionBtn.hidden   = YES;
-//    self.moreContentView.hidden = YES;
+    self.moreContentView.hidden = YES;
     // 初始化时重置controlView
     [self playerResetControlView];
 }
@@ -185,6 +185,20 @@
     self.moreBtn.enabled = YES;
     self.backLiveBtn.hidden              = YES;
 }
+- (void)setProgressTime:(NSInteger)currentTime
+              totalTime:(NSInteger)totalTime
+          progressValue:(CGFloat)progress
+          playableValue:(CGFloat)playable {
+    if (!self.isDragging) {
+        // 更新slider
+        self.videoSlider.value           = progress;
+    }
+    // 更新当前播放时间
+    self.currentTimeLabel.text = [StrUtils timeFormat:currentTime];
+    // 更新总时间
+    self.totalTimeLabel.text = [StrUtils timeFormat:totalTime];
+    [self.videoSlider.progressView setProgress:playable animated:NO];
+}
 #pragma mark - delegate
 #pragma mark -PlayerSliderDelegate
 - (void)onPlayerPointSelected:(PlayerPoint *)point {
@@ -271,9 +285,9 @@
     self.bottomImageView.hidden = YES;
     self.lockBtn.hidden = YES;
     
-//    self.moreContentView.playerConfig = self.playerConfig;
-//    [self.moreContentView update];
-//    self.moreContentView.hidden = NO;
+    self.moreContentView.playerConfig = self.playerConfig;
+    [self.moreContentView update];
+    self.moreContentView.hidden = NO;
     
     [self cancelFadeOut];
     self.isShowSecondView = YES;

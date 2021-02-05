@@ -140,6 +140,7 @@
 				E56BA0CE25CA7F6A00A4645C /* utils */,
 				E56BA0D325CA88B700A4645C /* PlayerSlider.h */,
 				E56BA0D425CA88B700A4645C /* PlayerSlider.m */,
+				E56BA0CC25CA7D3B00A4645C /* PlayerControlViewDelegate.h */,
 				E56BA0BF25CA4FF900A4645C /* ECBasePlayerControlView.h */,
 				E56BA0C025CA4FF900A4645C /* ECBasePlayerControlView.m */,
 				E56BA0C425CA764C00A4645C /* ECDefaultControlView.h */,
@@ -150,7 +151,6 @@
 				E56BA0E525CA984A00A4645C /* PlayerViewConfig.m */,
 				E56BA0C825CA786000A4645C /* Player.bundle */,
 				E56BA0CB25CA796500A4645C /* PlayerHeader.h */,
-				E56BA0CC25CA7D3B00A4645C /* PlayerControlViewDelegate.h */,
 			);
 			path = PlayerView;
 			sourceTree = "<group>";
