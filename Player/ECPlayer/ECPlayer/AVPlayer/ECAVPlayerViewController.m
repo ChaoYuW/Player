@@ -15,7 +15,7 @@
 
 
 @property (strong, nonatomic) AVPlayer *player;
-@property (strong, nonatomic) AVPlayerItem *playerItem;
+//@property (strong, nonatomic) AVPlayerItem *playerItem;
 @property (assign, nonatomic) CGFloat width;
 @property (assign, nonatomic) CGFloat height;
 
@@ -36,9 +36,9 @@
     _width = [[UIScreen mainScreen]bounds].size.width;
     _height = [[UIScreen mainScreen]bounds].size.height;
     
-    self.playerItem = [AVPlayerItem playerItemWithURL:[NSURL URLWithString:@"https://hard.storage.shmedia.tech/6319837d438b4bc099bbd5205d3f179e.mp4"]];
+    AVPlayerItem *playerItem = [AVPlayerItem playerItemWithURL:[NSURL URLWithString:@"https://hard.storage.shmedia.tech/6319837d438b4bc099bbd5205d3f179e.mp4"]];
     
-    self.player = [AVPlayer playerWithPlayerItem:self.playerItem];
+    self.player = [AVPlayer playerWithPlayerItem:playerItem];
     AVPlayerLayer *playerLayer = [AVPlayerLayer playerLayerWithPlayer:self.player];
     playerLayer.frame = CGRectMake(0, 0, _width, _height);
     playerLayer.videoGravity = AVLayerVideoGravityResizeAspect;
@@ -46,6 +46,13 @@
     self.controlView = [[ECDefaultControlView alloc] initWithFrame:CGRectMake(0, 0, _width, _height)];
     self.controlView.delegate = self;
     [self.view addSubview:self.controlView];
+    [self.player addPeriodicTimeObserverForInterval:CMTimeMake(1.0, 1.0) queue:dispatch_get_main_queue() usingBlock:^(CMTime time) {
+        AVPlayerItem *playerItem = self.player.currentItem;
+        CGFloat currentTime = CMTimeGetSeconds(time);
+        CGFloat totalTime = CMTimeGetSeconds(playerItem.duration);
+        CGFloat value = currentTime/totalTime;
+        [self.controlView setProgressTime:currentTime totalTime:totalTime progressValue:value playableValue:0];
+    }];
     
     
     
@@ -57,8 +64,9 @@
     
     
     //AVPlayer播放完成通知
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(moviePlayDidEnd:) name:AVPlayerItemDidPlayToEndTimeNotification object:_player.currentItem];
-    [self.playerItem addObserver:self forKeyPath:@"loadedTimeRanges" options:NSKeyValueObservingOptionNew context:nil];// 监听loadedTimeRanges属性
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(moviePlayDidEnd:) name:AVPlayerItemDidPlayToEndTimeNotification object:_player.currentItem];
+    [playerItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];// 监听status属性
+    [playerItem addObserver:self forKeyPath:@"loadedTimeRanges" options:NSKeyValueObservingOptionNew context:nil];// 监听loadedTimeRanges属性
     
 }
 
@@ -83,7 +91,10 @@
 }
 - (void)moviePlayDidEnd:(id)sender
 {
-    
+    AVPlayerItem *playerItem = self.player.currentItem;
+    [playerItem seekToTime:kCMTimeZero completionHandler:^(BOOL finished) {
+        
+    }];
 }
 #pragma mark -
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context
@@ -94,14 +105,29 @@
 //        CMTime duration = self.playerItem.duration;
 //        CGFloat totalDuration = CMTimeGetSeconds(duration);
 //        [self.progress setProgress:timeInterval / totalDuration animated:NO];
+        AVPlayerItem *playerItem = self.player.currentItem;
         
-        CMTime duration = self.playerItem.duration;
+        CMTime duration = playerItem.duration;
         //总时长
         CGFloat totalTime = CMTimeGetSeconds(duration);
-        CGFloat currentTime = CMTimeGetSeconds(self.playerItem.currentTime);
+        CGFloat currentTime = CMTimeGetSeconds(playerItem.currentTime);
         CGFloat value = currentTime/totalTime;
 
-        [self.controlView setProgressTime:currentTime totalTime:totalTime progressValue:value playableValue:0];
+        
+    }else if ([keyPath isEqualToString:@"status"])
+    {
+        AVPlayerStatus status = [[change objectForKey:@"new"] intValue]; // 获取更改后的状态
+        if (status == AVPlayerStatusReadyToPlay) {
+            AVPlayerItem *item = (AVPlayerItem *)object;
+            CMTime duration = item.duration; // 获取视频长度
+            
+        }else if (status == AVPlayerStatusFailed)
+        {
+            NSLog(@"AVPlayerStatusFailed");
+        }else
+        {
+            NSLog(@"AVPlayerStatusUnknown");
+        }
     }
 }
 - (NSTimeInterval)availableDuration {

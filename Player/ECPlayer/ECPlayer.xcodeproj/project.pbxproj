@@ -502,10 +502,25 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DSWQW3YJVV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ECPlayer/iOS/umcommonlog/umcommonlog_ios_2.0.0",
+					"$(PROJECT_DIR)/ECPlayer/iOS/thirdparties/thirdparties_ios_1.0.5",
+					"$(PROJECT_DIR)/ECPlayer/iOS/common/common_ios_7.2.5",
+					"$(PROJECT_DIR)/ECPlayer/iOS/share/share_ios_6.10.2/UMSocialUI",
+					"$(PROJECT_DIR)/ECPlayer/iOS/share/share_ios_6.10.2",
+				);
 				INFOPLIST_FILE = ECPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ECPlayer/iOS/share/share_ios_6.10.2/SocialLibraries/WeChat",
+					"$(PROJECT_DIR)/ECPlayer/iOS/share/share_ios_6.10.2/SocialLibraries/WeChat/WechatSDK",
+					"$(PROJECT_DIR)/ECPlayer/iOS/share/share_ios_6.10.2/SocialLibraries/Sina",
+					"$(PROJECT_DIR)/ECPlayer/iOS/share/share_ios_6.10.2/SocialLibraries/QQ",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dfyd.demo.ECPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -521,10 +536,25 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DSWQW3YJVV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ECPlayer/iOS/umcommonlog/umcommonlog_ios_2.0.0",
+					"$(PROJECT_DIR)/ECPlayer/iOS/thirdparties/thirdparties_ios_1.0.5",
+					"$(PROJECT_DIR)/ECPlayer/iOS/common/common_ios_7.2.5",
+					"$(PROJECT_DIR)/ECPlayer/iOS/share/share_ios_6.10.2/UMSocialUI",
+					"$(PROJECT_DIR)/ECPlayer/iOS/share/share_ios_6.10.2",
+				);
 				INFOPLIST_FILE = ECPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ECPlayer/iOS/share/share_ios_6.10.2/SocialLibraries/WeChat",
+					"$(PROJECT_DIR)/ECPlayer/iOS/share/share_ios_6.10.2/SocialLibraries/WeChat/WechatSDK",
+					"$(PROJECT_DIR)/ECPlayer/iOS/share/share_ios_6.10.2/SocialLibraries/Sina",
+					"$(PROJECT_DIR)/ECPlayer/iOS/share/share_ios_6.10.2/SocialLibraries/QQ",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dfyd.demo.ECPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
