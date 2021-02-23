@@ -7,9 +7,14 @@
 
 #import "PlayerView.h"
 #import "UIView+Fade.h"
+#import <MediaPlayer/MediaPlayer.h>
+
+static UISlider * _volumeSlider;
 
 @interface PlayerView () <UIGestureRecognizerDelegate>
-
+{
+    UIView *_fullScreenBlackView;
+}
 /** 进入后台*/
 @property (nonatomic, assign) BOOL                   didEnterBackground;
 /** 单击 */
@@ -20,6 +25,8 @@
 @property (nonatomic, assign) BOOL                   playDidEnd;
 /** 是否被用户暂停 */
 @property (nonatomic, assign) BOOL                   isPauseByUser;
+@property MPVolumeView *volumeView;
+
 @end
 
 @implementation PlayerView
@@ -45,6 +52,26 @@
  *  初始化player
  */
 - (void)initializeThePlayer {
+    
+    CGRect frame = CGRectMake(0, -100, 10, 0);
+    self.volumeView = [[MPVolumeView alloc] initWithFrame:frame];
+    [self.volumeView sizeToFit];
+    for (UIWindow *window in [[UIApplication sharedApplication] windows]) {
+        if (!window.isHidden) {
+            [window addSubview:self.volumeView];
+            break;
+        }
+    }
+    // 单例slider
+    _volumeSlider = nil;
+    for (UIView *view in [self.volumeView subviews]){
+        if ([view.class.description isEqualToString:@"MPVolumeSlider"]){
+            _volumeSlider = (UISlider *)view;
+            break;
+        }
+    }
+    _fullScreenBlackView = [UIView new];
+    _fullScreenBlackView.backgroundColor = [UIColor blackColor];
     
     _playerConfig = PlayerViewConfig.new;
     //添加通知
@@ -265,6 +292,8 @@
     // 移除通知
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [[UIDevice currentDevice] endGeneratingDeviceOrientationNotifications];
+    
+    [self.volumeView removeFromSuperview];
 }
 
 @end

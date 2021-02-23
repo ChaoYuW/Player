@@ -6,6 +6,7 @@ target 'ECPlayer' do
   use_frameworks!
 
   # Pods for ECPlayer
+#  pod 'SuperPlayer'
 
   pod 'Masonry'
   pod 'LookinServer', :configurations => ['Debug']
